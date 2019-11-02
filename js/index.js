@@ -4,7 +4,19 @@
 const navBar = document.querySelector('.nav-link');
 const bodyColor = document.querySelector('body');
 const bannerPhoto = document.querySelector('.intro img');
-const adventurePhoto = document.querySelector('.content-section img')
+const letsGoPhoto = document.querySelector('.content-section img')
+const adventurePhoto = document.querySelector('.inverse-content .img-content');
+
+// Form Created
+const navBox = document.querySelector('.nav-container')
+const form = document.createElement('form');
+navBox.appendChild(form)
+
+const formBox = document.querySelector('form');
+const inputBox = document.createElement('input');
+formBox.appendChild(inputBox)
+
+const inputSelector = document.querySelector('input')
 
 // 1. Mouseover
 navBar.addEventListener('mouseover', () => {
@@ -21,7 +33,7 @@ bodyColor.addEventListener('keydown', () => {
 
 // 4. Scroll
 window.addEventListener('scroll', () => {
-    adventurePhoto.style.transform = 'scale(1.4)';
+    letsGoPhoto.style.transform = 'scale(1.4)';
 });
 
 // 4. Drag/Drop
@@ -35,3 +47,6 @@ window.addEventListener('load', () =>{
 });
 
 // 6. Focus
+inputSelector.addEventListener('focus', () => {
+    inputSelector.style.backgroundColor = 'pink';
+});
