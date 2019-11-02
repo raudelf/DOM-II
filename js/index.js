@@ -31,9 +31,12 @@ bodyColor.addEventListener('keydown', () => {
     bodyColor.style.transition = '0.4s'
 });
 
-// 4. Scroll
-window.addEventListener('scroll', () => {
-    letsGoPhoto.style.transform = 'scale(1.4)';
+// 4. Wheel
+adventurePhoto.addEventListener('wheel', () => {
+    let scale = 1;
+    scale += event.deltaY * -0.01;
+    scale = Math.min(Math.max(.125, scale), 4);
+    adventurePhoto.style.transform = `scale(${scale})`;
 });
 
 // 4. Drag/Drop
@@ -50,3 +53,16 @@ window.addEventListener('load', () =>{
 inputSelector.addEventListener('focus', () => {
     inputSelector.style.backgroundColor = 'pink';
 });
+
+// 7. Resize
+
+
+// 8. Scroll
+window.addEventListener('scroll', () => {
+    letsGoPhoto.style.transform = 'scale(1.4)';
+});
+
+// 9. Select
+
+
+// 10. Double Click
