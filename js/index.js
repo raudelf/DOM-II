@@ -6,6 +6,7 @@ const bodyColor = document.querySelector('body');
 const bannerPhoto = document.querySelector('.intro img');
 const letsGoPhoto = document.querySelector('.content-section img')
 const adventurePhoto = document.querySelector('.inverse-content .img-content');
+const btn = document.querySelector('.btn');
 
 // Form Created
 const navBox = document.querySelector('.nav-container')
@@ -55,7 +56,9 @@ inputSelector.addEventListener('focus', () => {
 });
 
 // 7. Resize
-
+window.addEventListener('resize', () =>{
+    bodyColor.style.backgroundColor = '#FDB94C';
+});
 
 // 8. Scroll
 window.addEventListener('scroll', () => {
@@ -64,5 +67,7 @@ window.addEventListener('scroll', () => {
 
 // 9. Select
 
-
 // 10. Double Click
+btn.addEventListener('dblclick', () => {
+    btn.style.backgroundColor = 'green';
+});
