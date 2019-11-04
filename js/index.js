@@ -32,7 +32,7 @@ bodyColor.addEventListener('keydown', () => {
     bodyColor.style.transition = '0.4s'
 });
 
-// 4. Wheel
+// 3. Wheel
 adventurePhoto.addEventListener('wheel', () => {
     let scale = 1;
     scale += event.deltaY * -0.01;
@@ -66,6 +66,9 @@ window.addEventListener('scroll', () => {
 });
 
 // 9. Select
+inputSelector.addEventListener('select', () =>{
+    bodyColor.style.backgroundColor = 'green';
+})
 
 // 10. Double Click
 btn.addEventListener('dblclick', () => {
